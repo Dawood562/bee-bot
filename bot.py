@@ -103,7 +103,13 @@ async def explain(ctx):
     emb.set_footer(text = "Happy bee-ing!", icon_url="https://imgur.com/kgW4wlc.png")
     await ctx.reply(mention_author=False, embed=emb)
 
-
+@client.command()
+@commands.is_owner()
+async def dump(ctx):
+    f = open('bees.json', 'r')
+    file_contents = f.read()
+    await ctx.send(file_contents)
+    f.close()
 
 @client.event
 async def on_raw_reaction_add(payload):
