@@ -108,7 +108,7 @@ async def explain(ctx):
 async def dump(ctx):
     f = open('bees.json', 'r')
     file_contents = f.read()
-    if len(file_contents_ <= 1994:
+    if len(file_contents) <= 1994:
         await ctx.send(f"```{file_contents}```")
     else:
         for i in range(1, (len(file_contents)//2000)+1):
