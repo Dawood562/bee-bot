@@ -112,7 +112,7 @@ async def dump(ctx):
         await ctx.send(f"```{file_contents}```")
     else:
         for i in range(1, (len(file_contents)//2000)+1):
-           await ctx.send(f"```{file_contents[2000i-2000:2000i]}```")
+           await ctx.send(f"```{file_contents[2000*(i-1):2000*i]}```")
     f.close()
 
 @client.event
