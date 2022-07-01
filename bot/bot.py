@@ -11,8 +11,8 @@ import sys
 from datetime import datetime
 from jsonfuncs import *
 
-intents = discord.Intents.default()
-client = commands.Bot(command_prefix = 'bee', help_command=None, intents=intents, allowed_mentions = discord.AllowedMentions(everyone = False, roles = False), strip_after_prefix=True, case_insensitive=True, activity=discord.Activity(type=discord.ActivityType.watching, name='🐝'))
+
+client = commands.Bot(command_prefix = 'bee', help_command=None, intents=discord.Intents.default(), allowed_mentions = discord.AllowedMentions(everyone = False, roles = False), strip_after_prefix=True, case_insensitive=True, activity=discord.Activity(type=discord.ActivityType.watching, name='🐝'))
 
 
 def numbering(bees):
