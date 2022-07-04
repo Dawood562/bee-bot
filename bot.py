@@ -101,7 +101,16 @@ async def bees(ctx, msgid: int=None):
             if vw % 1 == 0:
                 msg = f"This message has {int(vw)} bees."
             else:
-                msg = f"This message has {vw} bees."        
+                msg = f"This message has {vw} bees."
+    else:
+        vw = view_bees(msgid)
+        if vw == 1:
+            msg = f"This message has 1 bee."
+        else:
+            if vw % 1 == 0:
+                msg = f"This message has {int(vw)} bees."
+            else:
+                msg = f"This message has {vw} bees."
     await ctx.reply(msg, mention_author=False)
 
 @client.command()
