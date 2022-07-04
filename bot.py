@@ -78,6 +78,13 @@ async def add(ctx, bees, msgid: int=None):
                 msg = f"Successfully added {numbering(bees)} to the message! It now has {numbering(vw)}."
             elif bees <0:
                 msg = f"Successfully removed {numbering(abs(bees))} from the message! It now has {numbering(vw)}."
+        else:
+            add_bees(msgid, bees)
+            vw = view_bees(msgid)
+            if bees > 0:
+                msg = f"Successfully added {numbering(bees)} to the message! It now has {numbering(vw)}."
+            elif bees <0:
+                msg = f"Successfully removed {numbering(abs(bees))} from the message! It now has {numbering(vw)}."
     await ctx.reply(msg, mention_author=False)
 
 
