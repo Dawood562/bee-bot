@@ -109,7 +109,13 @@ async def bees(ctx, msgid: int=None):
             msg = f"This message has 1 bee."
             print("1 bee")
         else:
-            if vw % 1 == 0:
+            try:
+                vw = vw % 1
+            except TypeError:
+                pass
+            except Exception as e:
+                print(e)
+            if vw == 0:
                 msg = f"This message has {int(vw)} bees."
                 print("vw % 1")
             else:
