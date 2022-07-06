@@ -16,7 +16,7 @@ client = commands.Bot(command_prefix = 'bee', help_command=None, intents=discord
 
 
 def numbering(bees):
-    if bees == 1:
+    if (bees == 1) or (bees.lower() == "a"):
         return "1 bee"
     else:
         if bees % 1 == 0:
@@ -95,7 +95,7 @@ async def bees(ctx, msgid: int=None):
     elif msgid is None:
         msgid = ctx.message.reference.message_id
         vw = view_bees(msgid)
-        if vw == 1:
+        if (vw == 1) or (vw.lower() == "a"):
             msg = f"This message has 1 bee."
         else:
             if vw % 1 == 0:
@@ -104,7 +104,7 @@ async def bees(ctx, msgid: int=None):
                 msg = f"This message has {vw} bees."
     else:
         vw = view_bees(msgid)
-        if vw == 1:
+        if (vw == 1) or (vw.lower() == "a"):
             msg = f"This message has 1 bee."
         else:
             if vw % 1 == 0:
