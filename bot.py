@@ -95,7 +95,7 @@ async def bees(ctx, msgid: int=None):
     elif msgid is None:
         msgid = ctx.message.reference.message_id
         vw = view_bees(msgid)
-        if (vw == 1) or (vw.lower() == "a"):
+        if vw == 1:
             msg = f"This message has 1 bee."
         else:
             if vw % 1 == 0:
@@ -104,7 +104,7 @@ async def bees(ctx, msgid: int=None):
                 msg = f"This message has {vw} bees."
     else:
         vw = view_bees(msgid)
-        if (vw == 1) or (vw.lower() == "a"):
+        if vw == 1:
             msg = f"This message has 1 bee."
         else:
             try:
