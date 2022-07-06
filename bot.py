@@ -16,7 +16,7 @@ client = commands.Bot(command_prefix = 'bee', help_command=None, intents=discord
 
 
 def numbering(bees):
-    if (bees == 1) or (bees.lower() == "a"):
+    if bees == 1:
         return "1 bee"
     else:
         if bees % 1 == 0:
